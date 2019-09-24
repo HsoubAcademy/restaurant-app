@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "121081576742",
+    "firebase_url": "https://hsoubrestaurant.firebaseio.com",
+    "project_id": "hsoubrestaurant",
+    "storage_bucket": "hsoubrestaurant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121081576742:android:889825d7cffcbbcc",
+        "android_client_info": {
+          "package_name": "com.hsoub.resturent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121081576742-qblnbft62aqma902ii1nespiaffguplc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hsoub.resturent",
+            "certificate_hash": "ab023bc4e932c561a0b99d3b5f0cb386dc78d392"
+          }
+        },
+        {
+          "client_id": "121081576742-tnpvi8cfv6ht2p2vgialcnim71mce22d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk7VgWyJrDIR8854he0wAwys6RjydsfCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121081576742-tnpvi8cfv6ht2p2vgialcnim71mce22d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

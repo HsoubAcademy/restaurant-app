@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    </link>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+
+    <link href="css/ionic.bundle.css" rel="stylesheet">
+    </link>
+
+    <title>تطبيق مطعمي</title>
+</head>
+
+<body>
+    <ion-app class="ion-page">
+        <ion-menu side="start" menu-id="first">
+            <ion-header>
+                <ion-toolbar color="danger">
+                    <ion-title>القائمة الرئيسية</ion-title>
+                </ion-toolbar>
+            </ion-header>
+
+            <ion-content>
+                <ion-list>
+                    <ion-item onclick="moveTo('/')">الصفحة الرئيسية</ion-item>
+                    <ion-item id="menuBook" onclick="moveTo('bookTable')">حجز طاولة</ion-item>
+                    <ion-item id="menuBooking" onclick="moveTo('myBookings')"> حجوزاتي</ion-item>
+                    <ion-item onclick="moveTo('contactUs')">اتصل بنا</ion-item>
+                    <ion-item onclick="moveTo('aboutUs')">حول المطعم</ion-item>
+                    <ion-item id="signInMenu" onclick="moveTo('signIn')">تسجيل الدخول</ion-item>
+                    <ion-item id="signOutMenu" onclick="signOut()">تسجيل خروج</ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        <ion-nav root="page-home">
+            <page-home>
+                <div class="ion-page" main="main">
+                    <!-- Home Header -->
+                    <ion-header translucent="true">
+                        <ion-toolbar color="danger">
+                            <ion-buttons slot="end">
+                                <!-- <ion-button onclick="clickedStar()">
+                                    <ion-icon slot="icon-only" name="contact"></ion-icon>
+                                </ion-button> -->
+                            </ion-buttons>
+
+                            <ion-title>الصفحة الرئيسية</ion-title>
+
+                            <ion-buttons slot="start">
+                                <ion-menu-toggle auto-hide="false">
+                                    <ion-button>
+                                        <ion-icon slot="icon-only" name="menu"></ion-icon>
+                                    </ion-button>
+                                </ion-menu-toggle>
+                            </ion-buttons>
+                        </ion-toolbar>
+                    </ion-header>
+
+                </div>
+            </page-home>
+        </ion-nav>
+    </ion-app>
+    <ion-alert-controller></ion-alert-controller>
+    <ion-toast-controller></ion-toast-controller>
+    <ion-menu-controller></ion-menu-controller>
+    <ion-router id="router" root="/">
+        <ion-route url="/" component="page-main"></ion-route>
+        <ion-route url="/foodList/:type_id" component="page-food-list"></ion-route>
+        <ion-route url="/food/:meal_id" component="page-food"></ion-route>
+        <ion-route url="/aboutUs" component="page-about-us"></ion-route>
+        <ion-route url="/contactUs" component="page-contact-us"></ion-route>
+        <ion-route url="/bookTable" component="page-book-table"></ion-route>
+        <ion-route url="/myBookings" component="page-my-bookings"></ion-route>
+        <ion-route url="/signIn" component="page-sign-in"></ion-route>
+        <ion-route url="/verificationCode" component="page-verification-code"></ion-route>
+    </ion-router>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/public_variables.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/pages/home.js"></script>
+    <script type="text/javascript" src="js/pages/about_us.js"></script>
+    <script type="text/javascript" src="js/pages/book_table.js"></script>
+    <script type="text/javascript" src="js/pages/contact_us.js"></script>
+    <script type="text/javascript" src="js/pages/food.js"></script>
+    <script type="text/javascript" src="js/pages/food_list.js"></script>
+    <script type="text/javascript" src="js/pages/my_bookings.js"></script>
+    <script type="text/javascript" src="js/pages/sign_in.js"></script>
+
+</body>
+
+</html>
